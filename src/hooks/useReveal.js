@@ -1,0 +1,35 @@
+import { useEffect, useRef, useState } from 'react'
+
+/**
+ * Reveals an element with a gentle fade + slide-up when it enters the viewport.
+ * Returns a ref to attach and a boolean visibility flag.
+ */
+export default function useReveal(threshold = 0.2) {
+  const ref = useRef(null)
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const node = ref.current
+    if (!node) return
+
+    if (typeof IntersectionObserver === 'undefined') {
+      setVisible(true)
+      return
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true)
+          observer.disconnect()
+        }
+      },
+      { threshold }
+    )
+
+    observer.observe(node)
+    return () => observer.disconnect()
+  }, [threshold])
+
+  return [ref, visible]
+}

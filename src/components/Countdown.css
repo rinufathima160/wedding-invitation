@@ -1,0 +1,63 @@
+.countdown {
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+  background: var(--color-bg-section);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.countdown__title {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin: 0.6rem 0 var(--space-lg);
+}
+
+.countdown__grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+}
+
+.countdown__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 120px;
+  height: 120px;
+  border: 1px solid var(--color-accent);
+  background: var(--color-bg);
+  transition: transform var(--transition-soft);
+}
+
+.countdown__card:hover {
+  transform: translateY(-4px);
+}
+
+.countdown__value {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  color: var(--color-text-primary);
+}
+
+.countdown__label {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 560px) {
+  .countdown__card {
+    width: 76px;
+    height: 76px;
+  }
+  .countdown__value {
+    font-size: 1.6rem;
+  }
+  .countdown__grid {
+    gap: 0.9rem;
+  }
+}

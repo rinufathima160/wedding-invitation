@@ -1,0 +1,12 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+main {
+  position: relative;
+}
+
+main > section:nth-of-type(odd) {
+  background: var(--color-bg);
+}
