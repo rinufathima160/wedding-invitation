@@ -63,8 +63,29 @@
   color: var(--color-text-secondary);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .location__row {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .location__row .btn-outline {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
   .location__map {
     margin: var(--space-sm) 0;
+  }
+  .location__qr {
+    padding: 0.8rem;
+  }
+  .location__qr img {
+    width: 96px;
+    height: 96px;
   }
 }

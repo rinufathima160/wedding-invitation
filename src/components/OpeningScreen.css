@@ -20,7 +20,10 @@
   z-index: 1;
   text-align: center;
   padding: var(--space-md);
+  width: 100%;
   max-width: 480px;
+  max-height: 100%;
+  overflow-y: auto;
   animation: openingRise 1.4s ease both;
 }
 
@@ -30,7 +33,7 @@
 }
 
 .opening__bismillah {
-  font-size: 1.6rem;
+  font-size: clamp(1.3rem, 4vw, 1.6rem);
   margin-bottom: var(--space-sm);
 }
 
@@ -39,9 +42,10 @@
 }
 
 .opening__names {
-  font-size: clamp(2.4rem, 7vw, 3.6rem);
-  margin: 1rem 0;
+  font-size: clamp(2rem, 7.5vw, 3.4rem);
+  margin: 0.8rem 0;
   font-weight: 500;
+  line-height: 1.15;
 }
 
 .opening__amp {
@@ -52,16 +56,28 @@
 }
 
 .opening__date {
-  font-size: 1.05rem;
+  font-size: clamp(0.9rem, 3.5vw, 1.05rem);
   color: var(--color-text-secondary);
   letter-spacing: 0.04em;
   margin-bottom: var(--space-md);
+  padding: 0 0.5rem;
 }
 
 .opening__button {
   margin-top: var(--space-sm);
 }
 
+@media (max-width: 768px) {
+  .opening__content {
+    animation: openingRise 0.9s ease both;
+  }
+}
+
 @media (max-width: 480px) {
-  .opening__bismillah { font-size: 1.3rem; }
+  .opening__button {
+    width: 100%;
+    max-width: 260px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

@@ -47,3 +47,25 @@
   margin: var(--space-sm) auto 0;
   font-size: 1.05rem;
 }
+
+@media (max-width: 768px) {
+  .details__card {
+    padding: var(--space-md) var(--space-sm);
+  }
+  .details__card::before {
+    inset: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .details__card {
+    padding: var(--space-md) 1rem;
+  }
+  .details__card::before {
+    inset: 6px;
+  }
+  .details__date,
+  .details__venue {
+    font-size: clamp(1.1rem, 3.8vw, 1.25rem);
+  }
+}

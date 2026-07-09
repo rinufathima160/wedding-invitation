@@ -23,10 +23,41 @@
   --transition-soft: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+@media (max-width: 1024px) {
+  :root {
+    --space-md: 1.75rem;
+    --space-lg: 3.5rem;
+    --space-xl: 5.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --space-md: 1.5rem;
+    --space-lg: 2.5rem;
+    --space-xl: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --space-xs: 0.4rem;
+    --space-sm: 0.8rem;
+    --space-md: 1.25rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 html {
@@ -41,7 +72,23 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+h1, h2, h3, h4, p, span, a, button {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 h1, h2, h3, h4 {
@@ -63,6 +110,7 @@ button {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -139,6 +187,12 @@ img {
   transform: translateY(0);
 }
 
+@media (max-width: 768px) {
+  .fade-in {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .fade-in {
     opacity: 1;
@@ -157,7 +211,8 @@ img {
   padding: 0 var(--space-md);
 }
 
-@media (max-width: 640px) {
-  body { font-size: 16.5px; }
-  .container { padding: 0 var(--space-sm); }
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--space-sm);
+  }
 }

@@ -31,10 +31,25 @@
   transform: scale(-1, -1);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   .floral-corner {
-    width: 64px;
-    height: 64px;
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .floral-corner {
+    width: 72px;
+    height: 72px;
     opacity: 0.35;
+  }
+}
+
+@media (max-width: 480px) {
+  .floral-corner {
+    width: 56px;
+    height: 56px;
+    opacity: 0.3;
   }
 }

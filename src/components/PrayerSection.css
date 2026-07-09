@@ -36,3 +36,16 @@
   text-transform: uppercase;
   color: var(--color-text-secondary);
 }
+
+@media (max-width: 768px) {
+  .prayer__arabic {
+    font-size: clamp(1.4rem, 4.5vw, 1.8rem);
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 480px) {
+  .prayer__translation {
+    font-size: clamp(1rem, 4vw, 1.1rem);
+  }
+}

@@ -47,3 +47,16 @@
   font-size: 0.85rem;
   color: var(--color-accent);
 }
+
+@media (max-width: 768px) {
+  .closing__thanks {
+    font-size: clamp(1rem, 3.8vw, 1.15rem);
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .closing__names {
+    font-size: clamp(1.8rem, 6vw, 2.2rem);
+  }
+}

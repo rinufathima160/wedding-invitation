@@ -36,11 +36,25 @@
   max-width: 500px;
   margin: 0 auto;
   color: var(--color-text-secondary);
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+  padding: 0 0.5rem;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
+  .venue__image {
+    height: 340px;
+  }
+}
+
+@media (max-width: 768px) {
   .venue__image {
     height: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  .venue__image {
+    height: 180px;
+    margin: var(--space-sm) 0;
   }
 }

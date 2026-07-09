@@ -22,7 +22,7 @@ export default function Navigation({ visible }) {
   if (!visible) return null
 
   return (
-    <header className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
+    <header className={`nav ${scrolled ? 'nav--scrolled' : ''} ${open ? 'nav--open' : ''}`}>
       <div className="nav__inner">
         <a href="#home" className="nav__brand">N &amp; R</a>
 

@@ -49,15 +49,34 @@
   color: var(--color-text-secondary);
 }
 
-@media (max-width: 560px) {
+@media (max-width: 768px) {
+  .countdown__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 110px));
+    justify-content: center;
+    gap: 1.2rem;
+  }
   .countdown__card {
-    width: 76px;
-    height: 76px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    gap: 0.4rem;
+  }
+  .countdown__value {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown__grid {
+    grid-template-columns: repeat(2, minmax(0, 96px));
+    gap: 0.8rem;
   }
   .countdown__value {
     font-size: 1.6rem;
   }
-  .countdown__grid {
-    gap: 0.9rem;
+  .countdown__label {
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
   }
 }
